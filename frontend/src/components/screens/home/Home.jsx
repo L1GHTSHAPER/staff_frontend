@@ -1,6 +1,8 @@
 import styles from "./Home.module.css";
 import globalStyles from "../../../assets/styles/global.css";
+
 import { useState, useEffect } from "react";
+
 import TicketItem from "./ticket-item/TicketItem";
 import CreateTicketForm from "./create-ticket-form/CreateTicketForm";
 import { TicketService } from "../../../services/ticket.service";

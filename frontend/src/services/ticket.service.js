@@ -23,9 +23,9 @@ export const TicketService = {
     return response.data;
   },
 
-  async getById(id) {
+  async getById(_id) {
     const response = await axios
-      .get("http://" + server + `:4444/tickets?id=${id}`, {
+      .get("http://" + server + `:4444/tickets?id=${_id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -37,6 +37,6 @@ export const TicketService = {
         console.log(error);
       });
       //console.log(response.data);
-    return response.data[id];
+    return response.data[_id];
   },
 };

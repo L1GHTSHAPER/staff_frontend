@@ -11,7 +11,7 @@
 }
 
 .logo {
-  background-color: black;
+  background-color: #454cee;
   color: #fff;
   font-weight: 700;
   line-height: 35px;
@@ -20,9 +20,11 @@
   border-radius: 5px;
   padding: 0 10px;
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 
   &:hover {
     background-color: #4361ee;
+    transition: all .2s ease-in-out;
   }
 }
 
@@ -34,4 +36,11 @@
   a {
     text-decoration: none;
   }
+}
+
+.active {
+  background-color: purple !important;
+}
+.nonactive{
+  background-color: #454cee !important;
 }

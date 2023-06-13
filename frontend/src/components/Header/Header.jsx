@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 
 import styles from "./Header.module.scss";
+import globalstyles from "../../assets/styles/global.css";
 import Container from "@mui/material/Container";
 
 export const Header = () => {
@@ -15,16 +16,19 @@ export const Header = () => {
       <Container maxWidth="lg">
         <div className={styles.inner}>
           <a className={styles.logo} href="/">
-            <div>workbench</div>
+            <div >workbench</div>
           </a>
-          <a href="#monitoring">
-            <Button variant="contained">Мониторинг</Button>
+          <a href="/">
+            <Button className={styles.active} variant="contained">Тикеты</Button>
           </a>
           <a href="#requests">
-            <Button variant="contained">Заявки</Button>
+            <Button className={styles.nonactive} variant="contained">Заявки</Button>
           </a>
-          <a href="#clients">
-            <Button variant="contained">Клиенты</Button>
+          <a href="#monitoring">
+            <Button className={styles.nonactive} variant="contained">Мониторинг</Button>
+          </a>
+          <a href="clients">
+            <Button className={styles.nonactive} variant="contained">Клиенты</Button>
           </a>
 
           <div className={styles.buttons}>
@@ -46,9 +50,9 @@ export const Header = () => {
                 <a href="/login">
                   <Button variant="outlined">Войти</Button>
                 </a>
-                <a href="/register">
+                {/* <a href="/register">
                   <Button variant="contained">Зарегистрироваться</Button>
-                </a>
+                </a> */}
               </>
             )}
           </div>
